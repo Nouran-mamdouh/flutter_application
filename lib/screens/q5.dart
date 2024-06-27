@@ -9,6 +9,7 @@ class Question5 extends StatefulWidget {
 }
 
 class _Question5State extends State<Question5> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +30,7 @@ class _Question5State extends State<Question5> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 5, top: 5),
+                padding: EdgeInsets.only(left: 0, right: 40, top: 5),
                 child: Text(
                   "INSOMNIA: MIDDLE OF THE NIGHT",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -45,13 +46,23 @@ class _Question5State extends State<Question5> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "No difficulty ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'No difficulty',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'No difficulty',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -59,18 +70,29 @@ class _Question5State extends State<Question5> {
                 padding: const EdgeInsets.only(top: 30),
                 child: InkWell(
                   child: Container(
-                    height: 80,
+                    height: 100,
                     width: 370,
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Patient complains of being restless and disturbed during the night",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Patient complains of being restless and disturbed during the night',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Patient complains of being restless and disturbed during the night',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -83,18 +105,28 @@ class _Question5State extends State<Question5> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Waking during the night",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Waking during the night',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Waking during the night',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 290, left: 280),
+                padding: const EdgeInsets.only(top: 260, left: 280),
                 child: Container(
                   height: 36,
                   width: 94,

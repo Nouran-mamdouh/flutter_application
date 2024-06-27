@@ -9,6 +9,7 @@ class Question2 extends StatefulWidget {
 }
 
 class _Question2State extends State<Question2> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +30,7 @@ class _Question2State extends State<Question2> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 5, top: 5),
+                padding: EdgeInsets.only(left: 5, top: 5, right: 180),
                 child: Text(
                   "FEELINGS OF GUILT ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -38,20 +39,28 @@ class _Question2State extends State<Question2> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 30),
-                child: InkWell(
-                  child: Container(
-                    height: 60,
-                    width: 370,
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFEFF1F7),
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Absent",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                child: Container(
+                  height: 60,
+                  width: 370,
+                  decoration: BoxDecoration(
+                      color: const Color(0XFFEFF1F7),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: RadioListTile(
+                    title: const Text(
+                      'Absent',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.left,
+                    ),
+                    value: 'Absent',
+                    groupValue: _selectedOption,
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedOption = value as String;
+                      });
+                    },
                   ),
                 ),
               ),
@@ -64,13 +73,23 @@ class _Question2State extends State<Question2> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Self reproach, feels he/she has let people down",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Self reproach, feels he/she has let people down',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Self reproach, feels he/she has let people down',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -83,13 +102,24 @@ class _Question2State extends State<Question2> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Ideas of guilt or rumination over past errors or sinful deeds",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Ideas of guilt or rumination over past errors or sinful deeds',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Ideas of guilt or rumination over past errors or sinful deeds',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -102,13 +132,24 @@ class _Question2State extends State<Question2> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Present illness is a punishment Delusions of guilt",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Present illness is a punishment Delusions of guilt',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Present illness is a punishment Delusions of guilt',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -116,18 +157,29 @@ class _Question2State extends State<Question2> {
                 padding: const EdgeInsets.only(top: 30),
                 child: InkWell(
                   child: Container(
-                    height: 100,
+                    height: 125,
                     width: 370,
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Hears accusatory or denunciatory voices and/or experiences threatening visual hallucinations",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Hears accusatory or denunciatory voices and/or experiences threatening visual hallucinations',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Hears accusatory or denunciatory voices and/or experiences threatening visual hallucinations',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),

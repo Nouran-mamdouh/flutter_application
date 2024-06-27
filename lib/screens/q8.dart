@@ -9,6 +9,7 @@ class Question8 extends StatefulWidget {
 }
 
 class _Question8State extends State<Question8> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,13 +46,81 @@ class _Question8State extends State<Question8> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Normal speech and thought",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Normal speech and thought',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Normal speech and thought',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: InkWell(
+                  child: Container(
+                    height: 70,
+                    width: 370,
+                    decoration: BoxDecoration(
+                        color: const Color(0XFFEFF1F7),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Slight retardation during the interview',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Slight retardation during the interview',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: InkWell(
+                  child: Container(
+                    height: 70,
+                    width: 370,
+                    decoration: BoxDecoration(
+                        color: const Color(0XFFEFF1F7),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Obvious retardation during the interview',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Obvious retardation during the interview',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -64,13 +133,23 @@ class _Question8State extends State<Question8> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Slight retardation during the interview",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Interview difficult',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Interview difficult',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -83,51 +162,23 @@ class _Question8State extends State<Question8> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Obvious retardation during the interview",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: InkWell(
-                  child: Container(
-                    height: 60,
-                    width: 370,
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFEFF1F7),
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Interview difficult",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: InkWell(
-                  child: Container(
-                    height: 60,
-                    width: 370,
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFEFF1F7),
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Complete stupor",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Complete stupor',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Complete stupor',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),

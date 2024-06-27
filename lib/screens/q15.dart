@@ -9,6 +9,7 @@ class Question15 extends StatefulWidget {
 }
 
 class _Question15State extends State<Question15> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +30,7 @@ class _Question15State extends State<Question15> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 30, right: 20),
+                padding: EdgeInsets.only(left: 10, right: 180),
                 child: Text(
                   "HYPOCHONDRIASIS  ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -45,13 +46,23 @@ class _Question15State extends State<Question15> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Not present",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Not present',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Not present',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -64,13 +75,23 @@ class _Question15State extends State<Question15> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Self-absorption (bodily)",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Self-absorption (bodily)',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Self-absorption (bodily)',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -83,13 +104,23 @@ class _Question15State extends State<Question15> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Preoccupation with health",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Preoccupation with health',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Preoccupation with health',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -102,13 +133,23 @@ class _Question15State extends State<Question15> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Frequent complaints, requests for help, etc",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Frequent complaints, requests for help, etc',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Frequent complaints, requests for help, etc',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -121,13 +162,23 @@ class _Question15State extends State<Question15> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Hypochondriacal delusions",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Hypochondriacal delusions',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Hypochondriacal delusions',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),

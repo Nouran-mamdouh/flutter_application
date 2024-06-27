@@ -10,6 +10,7 @@ class Question17 extends StatefulWidget {
 }
 
 class _Question17State extends State<Question17> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,7 +31,7 @@ class _Question17State extends State<Question17> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 30, right: 20),
+                padding: EdgeInsets.only(left: 10, right: 290),
                 child: Text(
                   "INSIGHT ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -41,18 +42,28 @@ class _Question17State extends State<Question17> {
                 padding: const EdgeInsets.only(top: 30),
                 child: InkWell(
                   child: Container(
-                    height: 60,
+                    height: 70,
                     width: 370,
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Acknowledges being depressed and ill",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Acknowledges being depressed and ill',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Acknowledges being depressed and ill',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -60,18 +71,29 @@ class _Question17State extends State<Question17> {
                 padding: const EdgeInsets.only(top: 30),
                 child: InkWell(
                   child: Container(
-                    height: 100,
+                    height: 125,
                     width: 370,
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Acknowledges illness but attributes cause to bad food, climate, overwork, virus, need for rest, etc",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Acknowledges illness but attributes cause to bad food, climate, overwork, virus, need for rest, etc',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Acknowledges illness but attributes cause to bad food, climate, overwork, virus, need for rest, etc',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -84,18 +106,28 @@ class _Question17State extends State<Question17> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Denies being ill at all",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Denies being ill at all',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Denies being ill at all',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 240, left: 280),
+                padding: const EdgeInsets.only(top: 230, left: 280),
                 child: Container(
                   height: 36,
                   width: 94,

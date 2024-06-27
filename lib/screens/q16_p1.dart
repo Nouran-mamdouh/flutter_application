@@ -9,6 +9,7 @@ class Question16P1 extends StatefulWidget {
 }
 
 class _Question16P1State extends State<Question16P1> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +30,7 @@ class _Question16P1State extends State<Question16P1> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 30, top: 15, right: 20),
+                padding: EdgeInsets.only(left: 20, top: 15, right: 20),
                 child: Text(
                   "LOSS OF WEIGHT ACCORDING TO YOU  ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -45,13 +46,23 @@ class _Question16P1State extends State<Question16P1> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "No weight loss",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'No weight loss',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'No weight loss',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -64,13 +75,24 @@ class _Question16P1State extends State<Question16P1> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          " Probable weight loss associated with present illness",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Probable weight loss associated with present illness',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value:
+                          'Probable weight loss associated with present illness',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -83,13 +105,23 @@ class _Question16P1State extends State<Question16P1> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Definite weight loss",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Definite weight loss',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Definite weight loss',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -102,18 +134,28 @@ class _Question16P1State extends State<Question16P1> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Not assessed",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Not assessed',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Not assessed',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 150, left: 280),
+                padding: const EdgeInsets.only(top: 180, left: 280),
                 child: Container(
                   height: 36,
                   width: 94,

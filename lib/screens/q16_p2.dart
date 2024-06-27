@@ -9,6 +9,7 @@ class Question16P2 extends StatefulWidget {
 }
 
 class _Question16P2State extends State<Question16P2> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +30,7 @@ class _Question16P2State extends State<Question16P2> {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 30, top: 15, right: 20),
+                padding: EdgeInsets.only(left: 20, top: 15, right: 20),
                 child: Text(
                   "LOSS OF WEIGHT ACCORDING TO WEELY MEASUREMENTS  ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -40,18 +41,86 @@ class _Question16P2State extends State<Question16P2> {
                 padding: const EdgeInsets.only(top: 30),
                 child: InkWell(
                   child: Container(
-                    height: 60,
+                    height: 70,
                     width: 370,
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(12)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Less than 1 lb weight loss in week",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Less than 1 lb weight loss in week',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Less than 1 lb weight loss in week',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: InkWell(
+                  child: Container(
+                    height: 70,
+                    width: 370,
+                    decoration: BoxDecoration(
+                        color: const Color(0XFFEFF1F7),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Greater than 1 lb weight loss in week',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Greater than 1 lb weight loss in week',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: InkWell(
+                  child: Container(
+                    height: 70,
+                    width: 370,
+                    decoration: BoxDecoration(
+                        color: const Color(0XFFEFF1F7),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Greater than 2 lb weight loss in week ',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Greater than 2 lb weight loss in week ',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -64,56 +133,28 @@ class _Question16P2State extends State<Question16P2> {
                     decoration: BoxDecoration(
                         color: const Color(0XFFEFF1F7),
                         borderRadius: BorderRadius.circular(12)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          " Greater than 1 lb weight loss in week",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
+                    child: RadioListTile(
+                      title: const Text(
+                        'Not assessed',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                      ),
+                      value: 'Not assessed',
+                      groupValue: _selectedOption,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedOption = value as String;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: InkWell(
-                  child: Container(
-                    height: 60,
-                    width: 370,
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFEFF1F7),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Greater than 2 lb weight loss in week ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.left,
-                        )),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: InkWell(
-                  child: Container(
-                    height: 60,
-                    width: 370,
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFEFF1F7),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Not assessed",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          textAlign: TextAlign.center,
-                        )),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 150, left: 280),
+                padding: const EdgeInsets.only(top: 140, left: 280),
                 child: Container(
                   height: 36,
                   width: 94,

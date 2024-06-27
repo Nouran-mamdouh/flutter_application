@@ -9,6 +9,7 @@ class Question7 extends StatefulWidget {
 }
 
 class _Question7State extends State<Question7> {
+  String _selectedOption = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,7 +31,7 @@ class _Question7State extends State<Question7> {
             Column(
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: 5, top: 5),
+                  padding: EdgeInsets.only(left: 5, top: 5, right: 150),
                   child: Text(
                     "WORK AND ACTIVITIES ",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -46,13 +47,82 @@ class _Question7State extends State<Question7> {
                       decoration: BoxDecoration(
                           color: const Color(0XFFEFF1F7),
                           borderRadius: BorderRadius.circular(8)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "No difficulty",
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                            textAlign: TextAlign.left,
-                          )),
+                      child: RadioListTile(
+                        title: const Text(
+                          'No difficulty',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                        ),
+                        value: 'No difficulty',
+                        groupValue: _selectedOption,
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedOption = value as String;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: InkWell(
+                    child: Container(
+                      height: 120,
+                      width: 370,
+                      decoration: BoxDecoration(
+                          color: const Color(0XFFEFF1F7),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: RadioListTile(
+                        title: const Text(
+                          'Thoughts and feelings of incapacity, fatigue or weakness related to activities, work or hobbies',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                        ),
+                        value:
+                            'Thoughts and feelings of incapacity, fatigue or weakness related to activities, work or hobbies',
+                        groupValue: _selectedOption,
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedOption = value as String;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: InkWell(
+                    child: Container(
+                      height: 75,
+                      width: 370,
+                      decoration: BoxDecoration(
+                          color: const Color(0XFFEFF1F7),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: RadioListTile(
+                        title: const Text(
+                          'Loss of interest in activity, hobbies or work',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                        ),
+                        value: 'Loss of interest in activity, hobbies or work',
+                        groupValue: _selectedOption,
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedOption = value as String;
+                          });
+                        },
+                      ),
                     ),
                   ),
                 ),
@@ -65,13 +135,24 @@ class _Question7State extends State<Question7> {
                       decoration: BoxDecoration(
                           color: const Color(0XFFEFF1F7),
                           borderRadius: BorderRadius.circular(8)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "Thoughts and feelings of incapacity, fatigue or weakness related to activities, work or hobbies",
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                            textAlign: TextAlign.left,
-                          )),
+                      child: RadioListTile(
+                        title: const Text(
+                          'Decrease in actual time spent in activities or decrease in productivity',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                        ),
+                        value:
+                            'Decrease in actual time spent in activities or decrease in productivity',
+                        groupValue: _selectedOption,
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedOption = value as String;
+                          });
+                        },
+                      ),
                     ),
                   ),
                 ),
@@ -79,56 +160,28 @@ class _Question7State extends State<Question7> {
                   padding: const EdgeInsets.only(top: 30),
                   child: InkWell(
                     child: Container(
-                      height: 80,
+                      height: 75,
                       width: 370,
                       decoration: BoxDecoration(
                           color: const Color(0XFFEFF1F7),
                           borderRadius: BorderRadius.circular(8)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "Loss of interest in activity, hobbies or work",
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                            textAlign: TextAlign.left,
-                          )),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: InkWell(
-                    child: Container(
-                      height: 80,
-                      width: 370,
-                      decoration: BoxDecoration(
-                          color: const Color(0XFFEFF1F7),
-                          borderRadius: BorderRadius.circular(8)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "Decrease in actual time spent in activities or decrease in productivity",
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                            textAlign: TextAlign.left,
-                          )),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: InkWell(
-                    child: Container(
-                      height: 80,
-                      width: 370,
-                      decoration: BoxDecoration(
-                          color: const Color(0XFFEFF1F7),
-                          borderRadius: BorderRadius.circular(8)),
-                      child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "Stopped working because of present illness",
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                            textAlign: TextAlign.left,
-                          )),
+                      child: RadioListTile(
+                        title: const Text(
+                          'Stopped working because of present illness',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.left,
+                        ),
+                        value: 'Stopped working because of present illness',
+                        groupValue: _selectedOption,
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedOption = value as String;
+                          });
+                        },
+                      ),
                     ),
                   ),
                 ),
